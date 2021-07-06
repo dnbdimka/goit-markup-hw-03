@@ -2,18 +2,44 @@
 body {
   font-family: "Roboto", "Verdana", "Tahoma", sans-serif;
   color: #757575;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 a {
   text-decoration: none;
 }
-li {
+
+ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 :root {
   --brand-color: #2196f3;
   --title-color: #212121;
 }
-/* header */
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.section {
+  padding: 94px 0;
+}
+.section.bottom-padding {
+  padding-top: 0;
+}
+.section-title {
+  margin: 0 0 50px 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.666;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+/*------------------ header /*------------------*/
 header {
   border-style: solid;
   border-width: 0 0 1px 0;
@@ -31,8 +57,8 @@ header {
 .logo-header span {
   color: #000000;
 }
-/* main nav */
-.main-nav .link {
+/*/*------------------ main nav /*------------------*/
+.main-nav-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -40,8 +66,8 @@ header {
   color: var(--title-color);
 }
 .main-nav .active,
-.main-nav .link:hover,
-.main-nav .link:focus,
+.main-nav-link:hover,
+.main-nav-link:focus,
 .header-contacts:hover,
 .header-contacts:focus {
   color: var(--brand-color);
@@ -53,20 +79,24 @@ header {
   letter-spacing: 0.02em;
   color: #757575;
 }
-/* banner section */
+/*/*------------------ banner section /*------------------*/
 .banner-section {
+  text-align: center;
   background-color: #2f303a;
+  padding: 200px 0;
 }
 .banner-section-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
 .banner-section-button {
+  padding: 10px 32px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -74,8 +104,7 @@ header {
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
-  width: 200px;
-  height: 50px;
+  min-width: 200px;
   background-color: var(--brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -85,8 +114,12 @@ header {
 .banner-section-button:hover {
   background: #1f8ae2;
 }
-/* advantages section */
-.advantages-section-title {
+/*/*------------------ advantages section /*------------------*/
+.advantages-item {
+  width: 270px;
+}
+.advantages-title {
+  margin: 0 0 10px 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -94,34 +127,27 @@ header {
   text-transform: uppercase;
   color: var(--title-color);
 }
-.advantages-section-paragraph {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+.advantages-paragraph {
+  margin: 0;
 }
-/* work section */
-.work-section-title,
-.team-section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.666;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-color);
-}
-/* team section */
+/*/*------------------ work section /*------------------*/
+
+/*/*------------------ team section /*------------------*/
 .team-section {
   background-color: #f5f4fa;
 }
-.team-section-item {
+.team-item {
   width: 270px;
-  height: 368px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-section-item-name {
+.team-text {
+  padding: 30px 0;
+}
+.team-item-name {
+  margin: 0 0 10px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.1875;
@@ -129,21 +155,29 @@ header {
   letter-spacing: 0.03em;
   color: var(--title-color);
 }
-.team-section-item-paragraph {
+.team-item-paragraph {
+  margin: 0;
   font-size: 16px;
   line-height: 1.1875;
   text-align: center;
-  letter-spacing: 0.03em;
 }
-/* footer */
-footer {
+/*/*------------------ footer /*------------------*/
+.footer {
   background-color: #2f303a;
+  padding: 60px 0;
+}
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 .logo-footer span {
   color: #fff;
 }
 .footer-adress-paragraph,
 .footer-contacts-link {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 9px;
   font-style: normal;
   font-size: 14px;
   line-height: 1.714;
@@ -158,7 +192,10 @@ footer {
   color: var(--brand-color);
 }
 /* ---------------------------------------- portfolio ---------------------------------------- */
-/* filter */
+/*/*------------------ filter /*------------------*/
+.filter {
+  margin-bottom: 50px;
+}
 .filter-button {
   cursor: pointer;
   border: none;
@@ -178,21 +215,28 @@ footer {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-/* our works */
-.our-works-item {
+/*/*------------------ portfolio /*------------------*/
+.portfolio-item {
   width: 370px;
+}
+.portfolio-item-box {
   border: 1px;
   border-style: solid;
   border-color: #eeeeee;
+  padding: 20px 24px;
 }
-.our-works-item-title {
+.portfolio-item-title {
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
 }
-.our-works-item-paragraph {
+.portfolio-item-paragraph {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
