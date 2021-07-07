@@ -266,6 +266,7 @@ img {
   margin-bottom: 50px;
 }
 .filter-button {
+  padding: 6px 22px;
   cursor: pointer;
   border: none;
   background: #f5f4fa;
